@@ -39,7 +39,7 @@ public:
 
 void generate_file(const string& filename,
     const vector<double>& probs,
-    int total_ops = 100000)
+    int total_ops = 1000000)
 {
     ofstream out(filename);
     random_device rd;
@@ -86,7 +86,7 @@ int main()
     DataStruct ds;
 
     vector<pair<string, vector<double>>> scenarios = {
-        {"a_condition", { 15,1,50,3,5,1,25 }}, 
+        {"a_condition", { 10,5,10,5,10,20,40 }},
         {"b_equal", { 1,1,1,1,1,1,1 }},        
         {"c_mismatch", { 40,1,2,30,1,5,21 }} 
     };
